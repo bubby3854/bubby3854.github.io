@@ -3,100 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개발자 포트폴리오</title>
+    <title>포트폴리오 소개</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
             line-height: 1.6;
             color: #333;
+        }
+
+        .container {
+            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
         }
+
         header {
-            background-color: #4a4a4a;
-            color: white;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem 0;
             text-align: center;
-            padding: 1rem;
         }
-        h1, h2 {
-            color: #2c3e50;
+
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem 0;
         }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
         section {
             margin-bottom: 2rem;
         }
-        .project, .skill, .api-exp {
-            background-color: #f4f4f4;
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .skills-list, .project, .experience {
+            background-color: #f9f9f9;
             border-radius: 5px;
             padding: 1rem;
             margin-bottom: 1rem;
         }
-        .contact a {
-            color: #3498db;
-            text-decoration: none;
+
+        .skills-list ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
         }
-        .contact a:hover {
-            text-decoration: underline;
+
+        .skills-list ul li {
+            background-color: #3498db;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.5rem;
         }
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
+
+        .project h3, .experience h3 {
+            color: #2980b9;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .skills-list ul {
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>개발자 포트폴리오</h1>
-        <p>Java, Spring Boot, MariaDB/MySQL, JavaScript 개발자</p>
+        <div class="container">
+            <h1>포트폴리오 소개</h1>
+        </div>
     </header>
 
-    <main>
-        <section id="projects">
-            <h2>프로젝트</h2>
-            <div class="project">
-                <h3>Spring Boot 백엔드 프로젝트</h3>
-                <p>Spring Boot를 활용한 RESTful API 개발 프로젝트입니다.</p>
-            </div>
-            <div class="project">
-                <h3>API 통합 웹 애플리케이션</h3>
-                <p>다양한 외부 API를 활용한 종합 정보 제공 웹 서비스입니다.</p>
-            </div>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#skills">기술 스택</a></li>
+                <li><a href="#projects">프로젝트</a></li>
+                <li><a href="#experience">경력</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about">
+            <h2>소개</h2>
+            <p>안녕하세요. 저는  추창민입니다. 신입 웹 개발자로, 웹 애플리케이션 개발에 열정을 가지고 있습니다. 
+               새로운 기술을 배우고 적용하는 것을 좋아하며, 팀 프로젝트에서 협업을 통해 최상의 결과를 만들어내는 것에 자부심을 느낍니다.</p>
         </section>
 
         <section id="skills">
             <h2>기술 스택</h2>
-            <div class="skill">Java</div>
-            <div class="skill">Spring Boot</div>
-            <div class="skill">MariaDB/MySQL</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">RESTful API 개발 및 통합</div>
+            <div class="skills-list">
+                <ul>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>Spring Boot</li>
+                    <li>MariaDB</li>
+                    <li>Git</li>
+                    <li>Flutter</li>
+                </ul>
+            </div>
         </section>
 
-        <section id="api-experience">
-            <h2>API 사용 경험</h2>
-            <div class="api-exp">AI API (OpenAI, Google Cloud AI)</div>
-            <div class="api-exp">날씨 API (OpenWeatherMap)</div>
-            <div class="api-exp">뉴스 API (NewsAPI)</div>
-            <div class="api-exp">공공데이터 포털 API</div>
-            <div class="api-exp">지도 API (Google Maps, Kakao Maps)</div>
+        <section id="projects">
+            <h2>프로젝트 1</h2>
+            <div class="project">
+                <h3>구인구직 플랫폼</h3>
+                <p><strong>설명:</strong> 사용자 친화적인 인터페이스와 안전한 결제 시스템을 갖춘 온라인 쇼핑몰 개발</p>
+                <p><strong>사용 기술:</strong>Spring Boot-mybatis, MariaDB</p>
+                <p><strong>역할:</strong> 구인구직 사이트의 전반적인 로그인기능과  관리자모드에서의 관리자기능을 개발</p>
+                <p><strong>주요 성과:</strong> 팀원들과 협엽하여 Git을 사용하여기본적인 CRUD 사용과 데이터베이스 연동으로 웹 어플리케이션을 개발</p>
+                <p><strong>링크:</strong> <a href="#">GitHub 저장소</a></p>
+            </div>
         </section>
 
-        <section id="blog">
-            <h2>기술 블로그</h2>
-            <ul>
-                <li><a href="#">API 통합 튜토리얼</a></li>
-                <li><a href="#">Spring Boot 팁과 트릭</a></li>
-                <li><a href="#">데이터베이스 최적화 기법</a></li>
-            </ul>
+        <section id="projects">
+            <h2>프로젝트 2</h2>
+            <div class="project">
+                <h3>구인구직 플랫폼</h3>
+                <p><strong>설명:</strong> Rest Api 활용하여 웹 어플리케이션 개발</p>
+                <p><strong>사용 기술:</strong>Spring Boot-JPA, JavaScript, MariaDB</p>
+                <p><strong>역할:</strong>JPA를 사용하여  관리자 대시보드 및 추천 공고및 AI 맞춤추천 기능을 개발.</p>
+                <p><strong>주요 성과:</strong>git을 사용하여  팀 단위 프로젝트를 JPA 및 Rest Api를 사용하고 데이터베이스 연동 으로 웹 어플리케이션을 개발</p>
+                <p><strong>링크:</strong> <a href="#">GitHub 저장소</a></p>
+            </div>
         </section>
 
-        <section id="contact" class="contact">
-            <h2>연락처</h2>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+        <section id="projects">
+            <h2>프로젝트 3</h2>
+            <div class="project">
+                <h3>부산 관광홍보 사이트 개발</h3>
+                <p><strong>설명:</strong> Rest Api 활용과 공공데이터 활용하여 홈페이지 구성하였으며, 여러가지 API를 사용하여 개발</p>
+                <p><strong>사용 기술:</strong>Spring Boot-JPA, MariaDB, JavaScript</p>
+                <p><strong>역할:</strong>GPT api, 날씨 Api, 구글맵 Api, 공공데이터 Api를 사용하여  필요한 정보를 DB에 저장해서 활용</p>
+                <p><strong>주요 성과:</strong>Api 및 RestConroller 사용하여 웹 어플리케이션을 개발</p>
+                <p><strong>링크:</strong> <a href="#">GitHub 저장소</a></p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>경력</h2>
+            <div class="experience">
+                <h3>ABC 기술 (2020년 - 현재)</h3>
+                <p><strong>직위:</strong> 웹 개발자</p>
+                <ul>
+                    <li>대규모 e-커머스 플랫폼의 프론트엔드 개발 및 유지보수</li>
+                    <li>RESTful API 설계 및 구현으로 백엔드 시스템 개선</li>
+                    <li>Agile/Scrum 방법론을 활용한 프로젝트 관리 및 팀 리딩</li>
+                </ul>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <p>Copyright © 2024 All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
